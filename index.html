@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apna Dukaan — The Night Bazaar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="tin" viewBox="0 0 24 24" fill="none">
+    <path d="M5 8.5C5 7.12 8.13 6 12 6s7 1.12 7 2.5v9C19 18.88 15.87 20 12 20s-7-1.12-7-2.5v-9Z" stroke="currentColor" stroke-width="1.6"/>
+    <ellipse cx="12" cy="8.5" rx="7" ry="2.5" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M9 4.2C9 3.5 10.3 3 12 3s3 .5 3 1.2-1.3 1.3-3 1.3-3-.6-3-1.3Z" stroke="currentColor" stroke-width="1.5"/>
+  </symbol>
+  <symbol id="icon-jar" viewBox="0 0 24 24" fill="none">
+    <rect x="6" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M8 8V6a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2" stroke="currentColor" stroke-width="1.6"/>
+    <rect x="7" y="3.5" width="10" height="2.5" rx="1" stroke="currentColor" stroke-width="1.6"/>
+    <line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.2" opacity=".5"/>
+    <line x1="8" y1="15" x2="16" y2="15" stroke="currentColor" stroke-width="1.2" opacity=".5"/>
+  </symbol>
+  <symbol id="icon-pickle" viewBox="0 0 24 24" fill="none">
+    <rect x="6" y="7" width="12" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6"/>
+    <rect x="8" y="3.5" width="8" height="4" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M6 12c2 1 4-1 6 0s4 1 6 0" stroke="currentColor" stroke-width="1.3" opacity=".6"/>
+    <path d="M9 15.5c1 .8 2 .3 3 .8s2 .3 3-.2" stroke="currentColor" stroke-width="1.1" opacity=".4"/>
+  </symbol>
+  <symbol id="icon-pouch" viewBox="0 0 24 24" fill="none">
+    <path d="M7 9h10l1 10.5a2 2 0 0 1-2 2.5H8a2 2 0 0 1-2-2.5L7 9Z" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M6.5 9 8 4h8l1.5 5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M9 4.5 9.8 6M12 4.5v1.8M15 4.5l-.8 1.5" stroke="currentColor" stroke-width="1.2"/>
+  </symbol>
+  <symbol id="icon-seedbowl" viewBox="0 0 24 24" fill="none">
+    <path d="M4 12h16a8 6 0 0 1-8 7 8 6 0 0 1-8-7Z" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="9" cy="8" r=".9" fill="currentColor"/>
+    <circle cx="12.5" cy="6.5" r=".9" fill="currentColor"/>
+    <circle cx="15.5" cy="8.3" r=".9" fill="currentColor"/>
+    <circle cx="11" cy="9.5" r=".7" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-sack" viewBox="0 0 24 24" fill="none">
+    <path d="M9 4h6l1.5 4c1.5 2 2 4.5 1.5 7-.6 3.5-3.5 6-6 6s-5.4-2.5-6-6c-.5-2.5 0-5 1.5-7L9 4Z" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M9.5 4c-.3 1 .5 1.8 2.5 1.8s2.8-.8 2.5-1.8" stroke="currentColor" stroke-width="1.4"/>
+    <line x1="9" y1="13" x2="15" y2="13" stroke="currentColor" stroke-width="1.1" opacity=".5"/>
+  </symbol>
+  <symbol id="icon-chilli" viewBox="0 0 24 24" fill="none">
+    <path d="M15 5c1.5 0 2 1 1.8 2.3" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M14.5 6c3 1 4.5 4.3 3.4 8-1.3 4.4-5 7-8 6-2-.7-2.8-3-2-5.3C9 10.5 12 6.8 14.5 6Z" stroke="currentColor" stroke-width="1.6"/>
+  </symbol>
+  <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none">
+    <path d="M12 20V6" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M12 8c0-2.5 2-4 4.5-4-.3 2.5-2 4-4.5 4Z" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M12 8c0-2.5-2-4-4.5-4 .3 2.5 2 4 4.5 4Z" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M12 13c0-2.2 1.8-3.5 4-3.5-.3 2.2-1.8 3.5-4 3.5Z" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M12 13c0-2.2-1.8-3.5-4-3.5.3 2.2 1.8 3.5 4 3.5Z" stroke="currentColor" stroke-width="1.5"/>
+  </symbol>
+  <symbol id="icon-root" viewBox="0 0 24 24" fill="none">
+    <path d="M6 13c-1-2 .5-4 2.5-3.5-.5-2 1.3-3.8 3-2.8 1-1.6 3.3-1.3 3.8.5 2-.4 3.2 1.6 2.2 3.2 1.6.8 1.5 3.2-.3 3.8-2.5.8-9.5.8-11.2-1.2Z" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M9 13.5c-.5 2 0 4 1.5 5.5M14 13c1 1.8 1.2 3.8.5 5.8" stroke="currentColor" stroke-width="1.3" opacity=".6"/>
+  </symbol>
+  <symbol id="icon-veg" viewBox="0 0 24 24" fill="none">
+    <path d="M9 5c1-1.3 3-1.3 3.5 0" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M10.5 5c-3 1-5 5-4 9.5 1 4.3 4 5.8 6 4.8 2.3-1.1 3.5-4.7 2.5-9C14 6.5 12.5 5.3 10.5 5Z" stroke="currentColor" stroke-width="1.6"/>
+  </symbol>
+  <symbol id="icon-diya" viewBox="0 0 24 24" fill="none">
+    <path d="M12 5c1 1.5.6 2.8-.2 3.6-.9.9-.6 2 .2 2 1.3 0 1.8-1.6 1-2.8.9.5 1.6 1.8 1 3-.5 1-1.6 1.4-2 1.4-1 0-2-.8-2-2 0-1.1.8-1.6 1.2-2.4C10.7 6.9 11.3 5.6 12 5Z" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M4 15c1.5-1 4-1.6 8-1.6s6.5.6 8 1.6c-.5 2.5-4 4.5-8 4.5s-7.5-2-8-4.5Z" stroke="currentColor" stroke-width="1.6"/>
+  </symbol>
+  <symbol id="icon-incense" viewBox="0 0 24 24" fill="none">
+    <line x1="12" y1="10" x2="12" y2="21" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M8 21h8" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M12 9c-1.5-1-1.8-2.3-1-3.5 1 .5 2 1.6 1.6 3M12 9c1.5-.6 2-2 1.3-3.3-1.1.3-2 1.4-1.9 2.8" stroke="currentColor" stroke-width="1.2" opacity=".7"/>
+  </symbol>
+  <symbol id="icon-sweet" viewBox="0 0 24 24" fill="none">
+    <circle cx="12" cy="13" r="7" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="9.5" cy="11" r=".8" fill="currentColor"/>
+    <circle cx="13" cy="10" r=".8" fill="currentColor"/>
+    <circle cx="15" cy="13.5" r=".8" fill="currentColor"/>
+    <circle cx="10.5" cy="15" r=".8" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-garland" viewBox="0 0 24 24" fill="none">
+    <path d="M3 8c3 4 6 6 9 6s6-2 9-6" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="6" cy="10.5" r="1.4" stroke="currentColor" stroke-width="1.3"/>
+    <circle cx="10" cy="13" r="1.4" stroke="currentColor" stroke-width="1.3"/>
+    <circle cx="14" cy="13" r="1.4" stroke="currentColor" stroke-width="1.3"/>
+    <circle cx="18" cy="10.5" r="1.4" stroke="currentColor" stroke-width="1.3"/>
+  </symbol>
+</svg>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand"><span class="dot"></span>Apna&nbsp;Dukaan</a>
+    <nav class="links">
+      <a href="#aisles">Aisles</a>
+      <a href="#shop">Shop</a>
+      <a href="#story">Story</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="search-box">
+        <span style="opacity:.6">🔍</span>
+        <input id="searchInput" type="text" placeholder="Search the bazaar...">
+      </div>
+      <button class="icon-btn" id="cartBtn" aria-label="Open cart">🧺<span class="badge" id="cartBadge">0</span></button>
+    </div>
+  </div>
+</header>
+
+<div id="top" class="hero">
+  <div class="glow" style="width:420px;height:420px;background:var(--gold);top:-140px;left:-140px;"></div>
+  <div>
+    <span class="eyebrow">The Bazaar, After Dark</span>
+    <h1>Every tin, sack &amp;<br>jar the <span>night bazaar</span><br>has to offer.</h1>
+    <p class="lede">Spices ground this week, dals sourced by state, pickles that taste like someone's kitchen. Browse the full shelf, fill your basket, we'll deliver in under two hours.</p>
+    <div class="hero-ctas">
+      <a href="#shop" class="btn btn-primary">Browse the Full Shelf →</a>
+      <a href="#aisles" class="btn btn-ghost">Explore Aisles</a>
+    </div>
+    <ul class="trust-row">
+      <li>Ground fresh, weekly</li>
+      <li>Family-run since 1996</li>
+      <li>2-hour local delivery</li>
+    </ul>
+  </div>
+
+  <div>
+    <div class="hero-lights" id="heroLights">
+      <svg class="dabba-wheel" viewBox="0 0 300 300" role="group" aria-label="Shop by aisle wheel">
+        <path d="M150,150 L150,10 A140,140 0 0,1 271.24,80 Z" fill="var(--gold)" tabindex="0" role="button"
+          data-cat="spices" data-name="Spices &amp; Masalas" data-desc="Ground fresh, weekly"></path>
+        <path d="M150,150 L271.24,80 A140,140 0 0,1 271.24,220 Z" fill="var(--ruby)" tabindex="0" role="button"
+          data-cat="snacks" data-name="Snacks &amp; Namkeen" data-desc="For the 5pm craving"></path>
+        <path d="M150,150 L271.24,220 A140,140 0 0,1 150,290 Z" fill="var(--emerald)" tabindex="0" role="button"
+          data-cat="produce" data-name="Fresh Produce" data-desc="Farm-picked, same day"></path>
+        <path d="M150,150 L150,290 A140,140 0 0,1 28.76,220 Z" fill="var(--sapphire)" tabindex="0" role="button"
+          data-cat="staples" data-name="Rice, Atta &amp; Dals" data-desc="Sourced state by state"></path>
+        <path d="M150,150 L28.76,220 A140,140 0 0,1 28.76,80 Z" fill="var(--amethyst)" tabindex="0" role="button"
+          data-cat="pickles" data-name="Pickles &amp; Chutneys" data-desc="Tastes like home"></path>
+        <path d="M150,150 L28.76,80 A140,140 0 0,1 150,10 Z" fill="var(--rose)" tabindex="0" role="button"
+          data-cat="festival" data-name="Pooja &amp; Festival" data-desc="Everything for the occasion"></path>
+      </svg>
+      <div class="dabba-center">
+        <span class="dabba-center-eyebrow">Tap a tin</span>
+        <span class="dabba-center-name" id="dabbaName">The Masala Dabba</span>
+        <span class="dabba-center-desc" id="dabbaDesc">six aisles, one bazaar</span>
+      </div>
+    </div>
+    <p class="dabba-hint">↻ Tap a wedge to jump straight to that aisle</p>
+  </div>
+</div>
+
+<div class="marquee-band" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Diwali sweet boxes now open for pre-order</span>
+    <span>Free delivery on orders over $25</span>
+    <span>New this week: Alphonso mango pickle</span>
+    <span>Onam sadya kit, back by request</span>
+    <span>Diwali sweet boxes now open for pre-order</span>
+    <span>Free delivery on orders over $25</span>
+    <span>New this week: Alphonso mango pickle</span>
+    <span>Onam sadya kit, back by request</span>
+  </div>
+</div>
+
+<section id="aisles" class="wrap">
+  <div class="glow" style="width:380px;height:380px;background:var(--amethyst);top:20%;right:-160px;"></div>
+  <div class="sec-head reveal">
+    <span class="eyebrow">The Bazaar, Mapped</span>
+    <h2>Browse the aisles</h2>
+    <p>Same categories your local dukaan has always had — just easier to find at 11pm.</p>
+  </div>
+  <div class="aisle-grid" id="aisleGrid"></div>
+</section>
+
+<section id="shop" class="wrap">
+  <div class="shop-head reveal">
+    <div>
+      <span class="eyebrow">Full Catalogue</span>
+      <h2>The full shelf</h2>
+      <div class="item-count" id="itemCount"></div>
+    </div>
+  </div>
+  <div class="pill-row" id="pillRow"></div>
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<section id="story">
+  <div class="glow" style="width:340px;height:340px;background:var(--sapphire);bottom:-100px;left:5%;"></div>
+  <div class="story reveal">
+    <svg class="story-art" viewBox="0 0 220 220" fill="none">
+      <circle cx="110" cy="110" r="100" stroke="var(--gold)" stroke-width="1" stroke-dasharray="2 8" opacity=".5"/>
+      <use href="#tin" x="70" y="55" width="80" height="80" style="color:var(--gold)"/>
+      <use href="#tin" x="20" y="100" width="55" height="55" style="color:var(--rose)"/>
+      <use href="#tin" x="145" y="100" width="55" height="55" style="color:var(--ruby)"/>
+    </svg>
+    <div>
+      <span class="eyebrow">Since 1996</span>
+      <h2>Started as one tin shop on a corner in Pune.</h2>
+      <p>Apna Dukaan began as a single shop counter where our founder, Rameshbhai, weighed spices by hand and remembered every regular's order. Three decades and one app later, we still buy the way he did — direct from growers, in small batches, tasted before they're shelved.</p>
+      <div class="stat-row">
+        <div><strong>1,200+</strong><span>brands stocked</span></div>
+        <div><strong>18</strong><span>Indian states represented</span></div>
+        <div><strong>40,000+</strong><span>households served</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="wrap">
+  <div class="sec-head reveal">
+    <span class="eyebrow">From the Neighbourhood</span>
+    <h2>What the regulars say</h2>
+  </div>
+  <div class="testi-row">
+    <div class="testi-card reveal in" style="--tint:var(--ruby)">
+      <div class="stars">★★★★★</div>
+      <p>"The Kashmiri mirch tastes exactly like the one my mother used to buy from her hometown shop. That colour, that mild heat — nailed it."</p>
+      <div class="testi-who"><div class="testi-avatar">P</div><div><strong>Priya N.</strong><span>Bengaluru</span></div></div>
+    </div>
+    <div class="testi-card reveal in" style="--tint:var(--emerald)">
+      <div class="stars">★★★★★</div>
+      <p>"Ordered a Diwali sweet box at 9pm, it showed up before noon the next day, still warm-smelling like a real mithai shop box."</p>
+      <div class="testi-who"><div class="testi-avatar">A</div><div><strong>Arjun K.</strong><span>Pune</span></div></div>
+    </div>
+    <div class="testi-card reveal in" style="--tint:var(--amethyst)">
+      <div class="stars">★★★★★</div>
+      <p>"Finally a grocery app that knows the difference between toor dal and chana dal. Small thing, but it tells you everything."</p>
+      <div class="testi-who"><div class="testi-avatar">S</div><div><strong>Sunita R.</strong><span>Hyderabad</span></div></div>
+    </div>
+    <div class="testi-card reveal in" style="--tint:var(--rose)">
+      <div class="stars">★★★★★</div>
+      <p>"The pooja kit had literally everything for Ganesh Chaturthi — down to the durva grass. Saved me three separate shop trips."</p>
+      <div class="testi-who"><div class="testi-avatar">M</div><div><strong>Meera D.</strong><span>Mumbai</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="wa-band reveal">
+    <div>
+      <h2>Prefer ordering the old-fashioned way?</h2>
+      <p>Send us your list on WhatsApp and we'll pack it like Rameshbhai used to — by hand, by memory.</p>
+    </div>
+    <a href="https://wa.me/50766036321?text=Hi!%20I%27d%20like%20to%20place%20an%20order." class="btn btn-line" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="newsletter reveal">
+    <span class="eyebrow">Stay Stocked</span>
+    <h2>Get festival offers first</h2>
+    <p>One email a week — restocks, regional specials, and early access to festival boxes. No spam, promise.</p>
+    <form onsubmit="return false;">
+      <input type="email" placeholder="you@example.com" aria-label="Email address" required>
+      <button class="btn btn-primary" type="submit">Notify Me</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><span class="dot"></span>Apna Dukaan</div>
+        <p>Your neighbourhood dukaan, digitised. Every tin sourced the way your family always trusted.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Aisles</h4>
+        <ul>
+          <li><a href="#" data-cat-link="spices">Spices &amp; Masalas</a></li>
+          <li><a href="#" data-cat-link="staples">Rice, Atta &amp; Dals</a></li>
+          <li><a href="#" data-cat-link="snacks">Snacks &amp; Namkeen</a></li>
+          <li><a href="#" data-cat-link="festival">Pooja &amp; Festival</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Delivery Areas</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="#">hello@apnadukaan.in</a></li>
+          <li><a href="tel:+50766036321">+507 6603-6321</a></li>
+          <li><a href="https://wa.me/50766036321?text=Hi!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">WhatsApp Order</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Apna Dukaan. Packed with care, delivered with trust.</span>
+      <span>Pune · Mumbai · Bengaluru · Hyderabad</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Quick view modal -->
+<div class="overlay" id="modalOverlay">
+  <div class="modal" id="modalPanel" style="--tint:var(--gold)">
+    <div class="modal-media">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <svg><use href="#tin"/></svg>
+    </div>
+    <div class="modal-body">
+      <span class="modal-region" id="modalRegion">Kashmir</span>
+      <h3 id="modalName">Product Name</h3>
+      <span class="weight" id="modalWeight">200g</span>
+      <p class="desc" id="modalDesc">Description</p>
+      <span class="modal-price" id="modalPrice">$0.00</span>
+      <div class="qty-row">
+        <div class="stepper">
+          <button id="modalMinus">−</button>
+          <span id="modalQty">1</span>
+          <button id="modalPlus">+</button>
+        </div>
+      </div>
+      <button class="btn btn-primary modal-add" id="modalAdd">Add to Basket</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cart drawer -->
+<div class="drawer-overlay" id="drawerOverlay">
+  <div class="drawer">
+    <div class="drawer-head">
+      <h3>Your Basket</h3>
+      <button class="drawer-close" id="drawerClose" aria-label="Close cart">✕</button>
+    </div>
+    <div class="drawer-items" id="drawerItems"></div>
+    <div class="drawer-foot">
+      <div class="subtotal-row"><span>Subtotal</span><strong id="subtotalVal">$0.00</strong></div>
+      <button class="btn btn-primary checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/app.js" defer></script>
+
+</body>
+</html>
